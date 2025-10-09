@@ -1,0 +1,33 @@
+# YouTube Configuration
+youtube:
+  # Pipeline hangi videoları işleyecekse bağlantıları buraya ekleyin.
+  video_urls:
+    # Örnek: URL'leri tırnak içinde satır satır ekleyin.
+    - "https://youtu.be/lVUBKQOLNAY?si=Qt6DsScU8gFQUalt"
+    - "https://www.youtube.com/watch?v=LuAzGH70DUo"
+    - "https://www.youtube.com/watch?v=ilstgd6hF7k"
+    - "https://www.youtube.com/watch?v=aVdHrzzSamk"
+# Text Processing
+text_processing:
+  # yaklaşık 320 token =~ 1100-1300 karakter aralığı
+  chunk_size: 1200
+  chunk_overlap: 240
+  min_chunk_length: 200
+
+# Embedding Configuration
+embedding:
+  model_name: "trmteb/turkish-embedding-model"
+  batch_size: 32
+  device: "cpu"  # veya "cuda" GPU varsa
+
+# Database Configuration
+mongodb:
+  uri: "mongodb://localhost:27017"
+  database: "youtube_transcripts"
+  collection: "cem_yilmaz_videos"
+
+qdrant:
+  host: "localhost"
+  port: 6333
+  collection_name: "cem_yilmaz_embeddings"
+  vector_size: 768  # trmteb model default size
