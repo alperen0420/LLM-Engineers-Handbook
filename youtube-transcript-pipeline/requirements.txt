@@ -1,20 +1,18 @@
-# ZenML ve orchestrator
-zenml[server]==0.55.0
+# Core pipeline
+zenml[server]==0.74.0
 
-# YouTube ve Transcript
-google-api-python-client==2.127.0
+# Video and transcript ingestion
 youtube-transcript-api==0.6.2
+pytube==15.0.0
 
-# Database
-pymongo==4.7.2
-qdrant-client==1.9.1
+# Data stores
+pymongo==4.6.2
+qdrant-client==1.8.0
 
-# Embedding ve NLP
-sentence-transformers==2.7.0
-torch==2.2.0
-transformers==4.40.0
-langchain==0.1.20
-langchain-text-splitters==0.0.1
+# Embeddings / NLP
+sentence-transformers==3.0.0
+torch==2.2.2
+langchain==0.2.11
 
 # Utilities
 python-dotenv==1.0.1
@@ -22,3 +20,4 @@ pandas==2.2.2
 numpy==1.26.4
 pydantic==2.7.0
 loguru==0.7.2
+pyyaml==6.0.2
